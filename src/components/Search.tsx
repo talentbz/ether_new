@@ -41,6 +41,7 @@ const Search = () => {
                 </div>
               </div>
             </form>
+            <p className="min-h-[14.19px]"></p>
           </div>
           <div className="hidden lg:block lg:col-span-5 m-auto">
             <a href="#!" className="mt-5 mr-10">

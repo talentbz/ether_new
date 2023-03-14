@@ -49,7 +49,6 @@ const Header = (dark: any, handleDark: any, options: any) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const dropdownMobile = useRef<HTMLDivElement>(null);
   const handleOutsideClick = (event: MouseEvent) => {
-    console.log(dropdownMobile);
     if (
       dropdownRef.current &&
       !dropdownRef.current.contains(event.target as Node) &&
@@ -140,12 +139,12 @@ const Header = (dark: any, handleDark: any, options: any) => {
                   >
                     <img
                       src={LightSun}
-                      width={16}
+                      width={15}
                       className="block dark:hidden"
                     />
                     <img
                       src={DarkMoon}
-                      width={16}
+                      width={12}
                       className="hidden dark:block"
                     />
                   </button>
@@ -918,7 +917,9 @@ const Header = (dark: any, handleDark: any, options: any) => {
                 </div>
               </div>
               <div className="hidden lg:block lg:flex items-center ">
-                <span className="text-primary text-base">|</span>
+                <span className="text-primary text-base dark:text-dSecondary">
+                  |
+                </span>
               </div>
               {/* Exproler submenr */}
               <div className="dropdown py-2 lg:py-0 relative lg:hidden items-center">

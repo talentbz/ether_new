@@ -1,11 +1,36 @@
 import { render } from '@testing-library/react';
-import React from 'react';
+import React, { useState } from 'react';
 import LightEther from '../assets/images/ethereum-original.svg';
 import DarkEther from '../assets/images/ethereum-original-light.svg';
 import LightMap from '../assets/images/light-map.png';
 import DarkMap from '../assets/images/dark-map.png';
+import LightArrow from '../assets/images/light-arrow.png';
+import LightArrowHover from '../assets/images/light-arrow-hover.png';
+import DarkArrow from '../assets/images/dark-arrow.png';
+import DarkArrowHover from '../assets/images/dark-arrow-hover.png';
+import LightTwitter from '../assets/images/light-twitter.png';
+import LightMedium from '../assets/images/light-medium.png';
+import LightFacebook from '../assets/images/light-facebook.png';
+import LightReddit from '../assets/images/light-reddit.png';
+import LightTwitterHover from '../assets/images/light-twitter-hover.png';
+import LightMediumHover from '../assets/images/light-medium-hover.png';
+import LightFacebookHover from '../assets/images/light-facebook-hover.png';
+import LightRedditHover from '../assets/images/light-reddit-hover.png';
+import DarkTwitter from '../assets/images/dark-twitter.png';
+import DarkMedium from '../assets/images/dark-medium.png';
+import DarkFacebook from '../assets/images/dark-facebook.png';
+import DarkReddit from '../assets/images/dark-reddit.png';
 
 const Footer = () => {
+  const [isHovering, setIsHovering] = useState('');
+  // console.log(isHovering);
+  // const handleMouseOver = () => {
+  //   setIsHovering();
+  // };
+
+  // const handleMouseOut = () => {
+  //   setIsHovering();
+  // };
   const toTop = () => {
     window.scrollTo({
       top: 0,
@@ -21,11 +46,26 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <a
                 href="#!"
-                className="py-1.5 px-2.5 rounded-full bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:text-[#000] dark:hover:bg-[#dee2e6] dark:hover:border-border"
+                onMouseOver={() => setIsHovering('twitter')}
+                onMouseOut={() => setIsHovering('')}
+                className="w-8 h-8 rounded-full justify-center items-center flex hover:bg-[#dee2e6] bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:bg-[#dee2e6] dark:hover:border-border"
                 data-tooltip-target="twitter"
                 data-tooltip-placement="top"
               >
-                <i className="fa fa-twitter"></i>
+                <img
+                  src={
+                    isHovering == 'twitter' ? LightTwitterHover : LightTwitter
+                  }
+                  width={13}
+                  className="block dark:hidden"
+                />
+                <img
+                  src={
+                    isHovering == 'twitter' ? LightTwitterHover : DarkTwitter
+                  }
+                  width={13}
+                  className="hidden dark:block"
+                />
               </a>
               <div
                 id="twitter"
@@ -37,11 +77,22 @@ const Footer = () => {
               </div>
               <a
                 href="#!"
-                className="py-1.5 px-2.5 rounded-full bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:text-[#000] dark:hover:bg-[#dee2e6] dark:hover:border-border"
+                className="w-8 h-8 rounded-full justify-center items-center flex hover:bg-[#dee2e6] bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:bg-[#dee2e6] dark:hover:border-border"
                 data-tooltip-target="medium"
                 data-tooltip-placement="top"
+                onMouseOver={() => setIsHovering('medium')}
+                onMouseOut={() => setIsHovering('')}
               >
-                <i className="fa fa-medium"></i>
+                <img
+                  src={isHovering == 'medium' ? LightMediumHover : LightMedium}
+                  width={13}
+                  className="block dark:hidden"
+                />
+                <img
+                  src={isHovering == 'medium' ? LightMediumHover : DarkMedium}
+                  width={13}
+                  className="hidden dark:block"
+                />
               </a>
               <div
                 id="medium"
@@ -53,11 +104,28 @@ const Footer = () => {
               </div>
               <a
                 href="#!"
-                className="py-1.5 px-3 rounded-full bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:text-[#000] dark:hover:bg-[#dee2e6] dark:hover:border-border"
+                className="w-8 h-8 rounded-full justify-center items-center flex hover:bg-[#dee2e6] bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:bg-[#dee2e6] dark:hover:border-border"
                 data-tooltip-target="facebook"
                 data-tooltip-placement="top"
+                onMouseOver={() => setIsHovering('facebook')}
+                onMouseOut={() => setIsHovering('')}
               >
-                <i className="fa fa-facebook"></i>
+                <img
+                  src={
+                    isHovering == 'facebook'
+                      ? LightFacebookHover
+                      : LightFacebook
+                  }
+                  width={13}
+                  className="block dark:hidden"
+                />
+                <img
+                  src={
+                    isHovering == 'facebook' ? LightFacebookHover : DarkFacebook
+                  }
+                  width={13}
+                  className="hidden dark:block"
+                />
               </a>
               <div
                 id="facebook"
@@ -69,11 +137,22 @@ const Footer = () => {
               </div>
               <a
                 href="#!"
-                className="py-1.5 px-2.5 rounded-full bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:text-[#000] dark:hover:bg-[#dee2e6] dark:hover:border-border"
+                className="w-8 h-8 rounded-full justify-center items-center flex hover:bg-[#dee2e6] bg-[#e9ecef] text-primary text-sm active:bg-[#5f6a74] dark:bg-dBorder dark:text-dHeading dark:hover:bg-[#dee2e6] dark:hover:border-border"
                 data-tooltip-target="reddit"
                 data-tooltip-placement="top"
+                onMouseOver={() => setIsHovering('reddit')}
+                onMouseOut={() => setIsHovering('')}
               >
-                <i className="fa fa-reddit-alien"></i>
+                <img
+                  src={isHovering == 'reddit' ? LightRedditHover : LightReddit}
+                  width={13}
+                  className="block dark:hidden"
+                />
+                <img
+                  src={isHovering == 'reddit' ? LightRedditHover : DarkReddit}
+                  width={13}
+                  className="hidden dark:block"
+                />
               </a>
               <div
                 id="reddit"
@@ -85,9 +164,23 @@ const Footer = () => {
               </div>
             </div>
             <div className="flex item-center">
-              <p className="text-primary hover:text-link text-sm dark:text-dHeading dark:hover:text-link">
-                <i className="fa fa-arrow-up" aria-hidden="true"></i>
-                <a href="#!" className="ml-2" onClick={toTop}>
+              <p
+                className="text-primary hover:text-link text-base dark:text-dHeading dark:hover:text-link"
+                onMouseOver={() => setIsHovering('back_to')}
+                onMouseOut={() => setIsHovering('')}
+              >
+                <img
+                  src={isHovering == 'back_to' ? LightArrowHover : LightArrow}
+                  className="inline dark:hidden"
+                  width={11}
+                />
+                <img
+                  src={isHovering == 'back_to' ? DarkArrowHover : DarkArrow}
+                  className="hidden dark:inline"
+                  width={11}
+                />
+
+                <a href="#!" className="ml-1 text-base" onClick={toTop}>
                   Back to Top
                 </a>
               </p>
@@ -97,7 +190,7 @@ const Footer = () => {
       </div>
 
       {/* footer mid */}
-      <div className="container mx-auto lg:py-10">
+      <div className="container mx-auto lg:pt-10 lg:pb-[24px]">
         <div className="grid sm:grid-2 lg:grid-cols-3">
           <div className="pt-6 mb-4 lg:pt-0 lg:mb-0">
             <div className="flex align-items-center mb-3">
@@ -107,13 +200,13 @@ const Footer = () => {
                 Powered by Ethereum
               </p>
             </div>
-            <div>
+            <div className="lg:mb-3">
               <p className="text-xs sm:mb-4 lg:mb-0 dark:text-dHeading">
                 Etherscan is a Block Explorer and Analytics Platform for
                 Ethereum, a decentralized smart contracts platform.
               </p>
             </div>
-            <div className="hidden lg:block">
+            <div className="hidden lg:block -mb-6 -mt-4">
               <img src={LightMap} width={280} className="block dark:hidden" />
               <img src={DarkMap} width={280} className="hidden dark:block" />
             </div>
@@ -141,16 +234,22 @@ const Footer = () => {
                     href="#!"
                     className="text-xs text-primary mb-3 hover:text-link dark:text-dHeading dark:hover:text-link"
                   >
+                    Contact Us
+                  </a>
+                  <a
+                    href="#!"
+                    className="text-xs text-primary mb-3 hover:text-link dark:text-dHeading dark:hover:text-link"
+                  >
                     Careers
+                    <span className="bg-link  text-[11px] text-[#fff] small fw-medium text-nowrap rounded-full p-1 px-2 ml-2">
+                      We're Hiring!
+                    </span>
                   </a>
                   <a
                     href="#!"
                     className="text-xs text-primary mb-3 hover:text-link dark:text-dHeading dark:hover:text-link"
                   >
                     Terms of Service
-                    <span className="bg-link  text-[11px] text-[#fff] small fw-medium text-nowrap rounded-full p-1 px-2 ml-2">
-                      We're Hiring!
-                    </span>
                   </a>
                   <a
                     href="#!"
@@ -224,7 +323,7 @@ const Footer = () => {
                     href="#!"
                     className="text-xs text-primary mb-3 hover:text-link dark:text-dHeading dark:hover:text-link"
                   >
-                    Priority Support
+                    Priority Suppor
                   </a>
                   <a
                     href="#!"
