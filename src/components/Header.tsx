@@ -322,7 +322,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
         className="border-b bg-white border-border dark:bg-dBgColor dark:border-dBorder"
         ref={dropdownMobile}
       >
-        <div className="container mx-auto px-5">
+        <div className="container mx-auto px-5 py-3 lg:py-0">
           <div className="lg:flex align-items-center justify-between ">
             <div className="flex align-items-center justify-between">
               <a href="#!" className="flex align-items-center">
@@ -337,7 +337,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
               <div className="lg:hidden flex items-center gap-4">
                 <a
                   href="#!"
-                  className="text-primary text-base py-4 hover:text-link flex items-center gap-1 dark:text-dSubColor"
+                  className="text-primary text-base lg:py-4 hover:text-link flex items-center gap-1 dark:text-dSubColor"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -378,17 +378,17 @@ const Header = (dark: any, handleDark: any, options: any) => {
             </div>
             {/* main menu */}
             <div
-              className={`pb-2 sm:pb-0 pt-2 lg:pt-0 lg:flex align-items-center ${
+              className={`grid gap-1 lg:gap-0 pt-4 lg:pt-0 lg:flex align-items-center ${
                 navbar ? 'block' : 'hidden'
               }`}
             >
-              <div className="dropdown py-2 lg:py-0 relative lg:flex items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:flex items-center">
                 <a href="#!" className="text-link text-base lg:py-4 lg:px-3">
                   Home
                 </a>
               </div>
               {/* block chain */}
-              <div className="dropdown py-2 lg:py-0 relative lg:flex items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:flex items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"
@@ -471,7 +471,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                 </ul>
               </div>
               {/* Token submenu */}
-              <div className="dropdown py-2 lg:py-0 relative lg:flex items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:flex items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"
@@ -508,7 +508,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                 </ul>
               </div>
               {/* NFT submenu */}
-              <div className="dropdown py-2 lg:py-0 relative lg:flex items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:flex items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"
@@ -559,7 +559,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                 </ul>
               </div>
               {/* resource submenu */}
-              <div className="dropdown py-2 lg:py-0 relative lg:flex items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:flex items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"
@@ -618,7 +618,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                 </ul>
               </div>
               {/* Developers submenu */}
-              <div className="dropdown py-2 lg:py-0 relative lg:flex items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:flex items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"
@@ -922,7 +922,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                 </span>
               </div>
               {/* Exproler submenr */}
-              <div className="dropdown py-2 lg:py-0 relative lg:hidden items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:hidden items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"
@@ -995,7 +995,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                 </ul>
               </div>
               {/* Exproler submenr */}
-              <div className="dropdown py-2 lg:py-0 relative lg:hidden items-center">
+              <div className="dropdown py-[4.8px] lg:py-0 relative lg:hidden items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"

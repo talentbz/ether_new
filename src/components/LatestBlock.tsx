@@ -108,14 +108,14 @@ const LatestBlock = () => {
           Latest Blocks
         </p>
       </div>
-      <div className="h-[450px] sm:h-auto scrollbar scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100  scrollbar-w-2 scrollbar-h-50 scrollbar-thumb-rounded">
+      <div className="h-[484.8px] sm:h-auto scrollbar scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100  scrollbar-w-2 scrollbar-h-50 scrollbar-thumb-rounded">
         <div className="p-4">{listItem}</div>
       </div>
       <a
         href="#!"
         className="p-4 border-t border-border flex uppercase text-cap text-secondary hover:text-link items-center justify-center bg-light rounded-b-xl dark:bg-dLightBg dark:border-dBorder dark:text-dSecondary dark:hover:text-link"
       >
-        <span>View all blocks</span>
+        <span className="font-medium">View all blocks</span>
         <span className="ml-1">
           <svg
             xmlns="http://www.w3.org/2000/svg"

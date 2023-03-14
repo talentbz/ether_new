@@ -192,7 +192,7 @@ const Footer = () => {
       {/* footer mid */}
       <div className="container mx-auto lg:pt-10 lg:pb-[24px]">
         <div className="grid sm:grid-2 lg:grid-cols-3">
-          <div className="pt-6 mb-4 lg:pt-0 lg:mb-0">
+          <div className="pt-8 mb-4 lg:pt-0 lg:mb-0">
             <div className="flex align-items-center mb-3">
               <img src={LightEther} width={20} className="block dark:hidden" />
               <img src={DarkEther} width={20} className="hidden dark:block" />
@@ -200,7 +200,7 @@ const Footer = () => {
                 Powered by Ethereum
               </p>
             </div>
-            <div className="lg:mb-3">
+            <div className="mb-4 lg:mb-3">
               <p className="text-xs sm:mb-4 lg:mb-0 dark:text-dHeading">
                 Etherscan is a Block Explorer and Analytics Platform for
                 Ethereum, a decentralized smart contracts platform.
