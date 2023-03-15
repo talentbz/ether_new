@@ -237,14 +237,14 @@ const Contents = () => {
             {/* ether transaction */}
           </div>
         </div>
-        <div className="block lg:hidden grid justify-items-center m-auto items-center">
+        <div className="lg:hidden grid justify-items-center m-auto items-center">
           <a href="#!" className="-mt-3 mb-2">
             <span className="bg-white  text-[12.6px] small text-nowrap rounded-md p-0.5 px-1 dark:bg-dBgColor dark:text-dSubColor">
               Ad
             </span>
           </a>
         </div>
-        {/* latest blcok */}
+        {/* latest block */}
         <div className="grid lg:grid-cols-2 gap-4">
           <LatestBlock />
           <LatestTransaction />

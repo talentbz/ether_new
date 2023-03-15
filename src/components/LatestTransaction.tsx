@@ -105,7 +105,7 @@ const LatestTransaction = () => {
           Latest Transactions
         </p>
       </div>
-      <div className="h-[484.8px] sm:h-auto scrollbar scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100  scrollbar-w-2 scrollbar-h-50 scrollbar-thumb-rounded">
+      <div className="h-[484.8px] sm:h-auto scrollbar scrollbar-thumb-gray-300 scrollbar-track-gray-100  scrollbar-w-2 scrollbar-h-50 scrollbar-thumb-rounded">
         <div className="p-4">{listItem}</div>
       </div>
       <a

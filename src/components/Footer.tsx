@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React, { useState } from 'react';
 import LightEther from '../assets/images/ethereum-original.svg';
 import DarkEther from '../assets/images/ethereum-original-light.svg';

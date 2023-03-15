@@ -31,7 +31,6 @@ module.exports = {
       success: '#00a186',
       transparent: 'transparent',
       white: 'white',
-      tooltip: '#111b36',
       // dark mode color
       dBgLink: '#252525',
       dBorder: '#222',

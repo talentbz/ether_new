@@ -38,11 +38,8 @@ import DarkToken from '../assets/images/dark-token.png';
 import DarkVerify from '../assets/images/dark-verify.png';
 import DarkChat from '../assets/images/dark-chat.png';
 
-interface Props {
-  options: string[];
-}
-
-const Header = (dark: any, handleDark: any, options: any) => {
+const Header = (dark: any) => {
+  console.log('type' + typeof dark);
   const [navbar, setNavbar] = useState(false);
   const [selected, setSelected] = useState('');
   // Mouse out event
@@ -170,12 +167,12 @@ const Header = (dark: any, handleDark: any, options: any) => {
                         <img
                           src={LightSun}
                           width={15}
-                          className="inline mr-2 block dark:hidden"
+                          className="inline mr-2  dark:hidden"
                         />
                         <img
                           src={DarkSun}
                           width={15}
-                          className="inline mr-2 hidden dark:block"
+                          className="mr-2 hidden dark:block"
                         />
                         <span>Light</span>
                       </a>
@@ -194,12 +191,12 @@ const Header = (dark: any, handleDark: any, options: any) => {
                         <img
                           src={LightMoon}
                           width={11}
-                          className="inline mr-3 block dark:hidden"
+                          className="mr-3 block dark:hidden"
                         />
                         <img
                           src={DarkMoon}
                           width={11}
-                          className="inline mr-3 hidden dark:block"
+                          className="mr-3 hidden dark:block"
                         />
                         <span>Dark</span>
                       </a>
@@ -211,12 +208,12 @@ const Header = (dark: any, handleDark: any, options: any) => {
                         <img
                           src={LightSetting}
                           width={13}
-                          className="inline mr-2 block dark:hidden"
+                          className="mr-2 block dark:hidden"
                         />
                         <img
                           src={DarkSetting}
                           width={13}
-                          className="inline mr-2 hidden dark:block"
+                          className="mr-2 hidden dark:block"
                         />
                         <span className="mr-1">Site Settings</span>
                         <span>
@@ -242,7 +239,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                     className="border rounded-lg border-border hover:bg-border focus:bg-border w-[38px]	h-[38px] flex justify-center items-center dark:border-dBorder dark:focus:bg-dBorder dark:hover:bg-dBorder"
                     onClick={() =>
                       setSelected(
-                        selected !== 'ehterSetting' ? 'ehterSetting' : '',
+                        selected !== 'etherSetting' ? 'etherSetting' : '',
                       )
                     }
                   >
@@ -260,7 +257,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                   {/* ether setting */}
                   <div
                     className={`absolute bg-white border border-bg rounded-md right-0 top-[40px] shadow-[0_8px_16px_0_rgba(0,0,0,0.15)] dark:bg-[#111] dark:border-dBorder ${
-                      selected == 'ehterSetting' ? 'block' : 'hidden'
+                      selected == 'etherSetting' ? 'block' : 'hidden'
                     }`}
                   >
                     <div className="p-2 flex-row">
@@ -916,26 +913,26 @@ const Header = (dark: any, handleDark: any, options: any) => {
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:block lg:flex items-center ">
+              <div className="hidden lg:flex items-center ">
                 <span className="text-primary text-base dark:text-dSecondary">
                   |
                 </span>
               </div>
-              {/* Exproler submenr */}
+              {/* Explore submenu */}
               <div className="dropdown py-[4.8px] lg:py-0 relative lg:hidden items-center">
                 <a
                   href="#!"
                   className="flex justify-between lg:block text-primary text-base lg:py-4 lg:px-3 hover:text-link dark:text-dPrimary dark:hover:text-link"
                   onClick={() =>
-                    setSelected(selected !== 'Li_exproler' ? 'Li_exproler' : '')
+                    setSelected(selected !== 'Li_Explore' ? 'Li_Explore' : '')
                   }
                 >
-                  Exprolers
+                  Explores
                   <i className="fa fa-angle-down ml-1"></i>
                 </a>
                 <ul
                   className={`dropdown-menu border mt-1 rounded-md border-border lg:border-0 lg:absolute lg:hidden bg-white lg:top-[54px] lg:left-0 lg:border-t-[3px] lg:border-link lg:rounded-none lg:rounded-b-lg lg:mt-0 lg:min-w-[14rem] p-2 lg:shadow-[0_8px_16px_0px_rgba(0,0,0,0.3)] z-10 dark:bg-dBgColor dark:border-dBorder ${
-                    selected == 'Li_exproler' ? 'block' : 'hidden'
+                    selected == 'Li_Explore' ? 'block' : 'hidden'
                   }`}
                 >
                   <li className="mb-1">
@@ -994,7 +991,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                   </li>
                 </ul>
               </div>
-              {/* Exproler submenr */}
+              {/* Explore submenu */}
               <div className="dropdown py-[4.8px] lg:py-0 relative lg:hidden items-center">
                 <a
                   href="#!"
@@ -1003,7 +1000,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                     setSelected(selected !== 'Li_setting' ? 'Li_setting' : '')
                   }
                 >
-                  Apearance & Settings
+                  Appearance & Settings
                   <i className="fa fa-angle-down ml-1"></i>
                 </a>
                 <ul
@@ -1039,7 +1036,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                   </li>
                   <li className="mb-1 border-t border-border dark:border-dBorder">
                     <a
-                      className="rounded-lg flex items-center hover:bg-border py-1.5 px-3 block text-submenu mt-2"
+                      className="rounded-lg flex items-center hover:bg-border py-1.5 px-3 text-submenu mt-2 dark:hover:bg-dSubHoverBg"
                       href="#"
                     >
                       <img
@@ -1047,7 +1044,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
                         width={13}
                         className="inline mr-2"
                       />
-                      <span className="mr-1 dark:text-dSubMenu dark:hover:bg-dSubHoverBg dark:hover:text-dSubColor">
+                      <span className="mr-1 dark:text-dSubMenu dark:hover:text-dSubColor">
                         Site Settings
                       </span>
                       <span>
@@ -1070,7 +1067,7 @@ const Header = (dark: any, handleDark: any, options: any) => {
               </div>
               <a
                 href="#!"
-                className="hidden lg:block text-primary text-base lg:p-4 hover:text-link lg:flex items-center gap-1 dark:text-dPrimary dark:hover:text-link"
+                className="hidden text-primary text-base lg:p-4 hover:text-link lg:flex items-center gap-1 dark:text-dPrimary dark:hover:text-link"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
